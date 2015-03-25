@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>J.Sakamoto</authors>
+    <owners>J.Sakamoto</owners>
+    <licenseUrl>https://github.com/jsakamoto/iconextractor/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsakamoto/iconextractor</projectUrl>
+    <!--
+    <iconUrl/>
+    -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+      Extract .ico file from PE Format file (.exe, .dll)
+    </summary>
+    <description>
+      This library allows you to extracting first .ico file in PE format file (.exe, .dll) to stream.
+    </description>
+    <releaseNotes>
+      <![CDATA[
+      v.1.0
+      - first release
+      ]]>
+    </releaseNotes>
+    <tags>icon,icons</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
