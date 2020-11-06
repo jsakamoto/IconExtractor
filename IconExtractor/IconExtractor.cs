@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using Toolbelt.Drawing.Win32;
 
 namespace Toolbelt.Drawing
@@ -44,7 +42,7 @@ namespace Toolbelt.Drawing
         {
             var hResInf = Kernel32.FindResource(hModule, lpszName, RT.GROUP_ICON);
             if (hResInf == null) throw new Win32Exception();
-            
+
             var hResource = Kernel32.LoadResource(hModule, hResInf);
             if (hResource == null) throw new Win32Exception();
 
@@ -58,7 +56,7 @@ namespace Toolbelt.Drawing
             var iconResInfos = Enumerable.Range(0, iconResHead.Count)
                 .Select(i => (ICONRESINF)Marshal.PtrToStructure(ptrResource + s1 + s2 * i, typeof(ICONRESINF)))
                 .ToArray();
-            
+
             return iconResInfos;
         }
 

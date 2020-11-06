@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Text;
 
 // http://www.pinvoke.net/
 
@@ -91,7 +89,7 @@ namespace Toolbelt.Drawing.Win32
     };
 
     internal delegate bool EnumResNameProcDelegate(IntPtr hModule, RT lpszType, IntPtr lpszName, IntPtr lParam);
-    
+
     internal class Kernel32
     {
         [DllImport("kernel32.dll", SetLastError = true)]

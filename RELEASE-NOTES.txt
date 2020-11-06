@@ -1,0 +1,5 @@
+v.1.0.1
+- Support .NET Standard 2.0
+
+v.1.0.0
+- first release

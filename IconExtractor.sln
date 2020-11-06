@@ -1,16 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30626.31
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconExtractor", "IconExtractor\IconExtractor.csproj", "{9F511B29-FA84-4861-820E-6D44C313B658}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IconExtractor", "IconExtractor\IconExtractor.csproj", "{3A333DC5-B952-42F7-BF0D-D5A9A4E7F899}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AAB2D236-5D2F-40AC-BE20-FDD5C43FCE76}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{F6C50C48-1CB2-41A9-864D-CF3AFD402695}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
+		LICENSE = LICENSE
+		README.md = README.md
+		RELEASE-NOTES.txt = RELEASE-NOTES.txt
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IconExtractor.Test", "IconExtractor.Test\IconExtractor.Test.csproj", "{828CC5B5-37AC-4A10-B44C-95C71F298B1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IconExtractor.Test.FixtureApp", "IconExtractor.Test.FixtureApp\IconExtractor.Test.FixtureApp.csproj", "{579FDE06-A807-4A81-97A6-1D2D928C1CA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,12 +22,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F511B29-FA84-4861-820E-6D44C313B658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F511B29-FA84-4861-820E-6D44C313B658}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F511B29-FA84-4861-820E-6D44C313B658}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F511B29-FA84-4861-820E-6D44C313B658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A333DC5-B952-42F7-BF0D-D5A9A4E7F899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A333DC5-B952-42F7-BF0D-D5A9A4E7F899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A333DC5-B952-42F7-BF0D-D5A9A4E7F899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A333DC5-B952-42F7-BF0D-D5A9A4E7F899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828CC5B5-37AC-4A10-B44C-95C71F298B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828CC5B5-37AC-4A10-B44C-95C71F298B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828CC5B5-37AC-4A10-B44C-95C71F298B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828CC5B5-37AC-4A10-B44C-95C71F298B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579FDE06-A807-4A81-97A6-1D2D928C1CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579FDE06-A807-4A81-97A6-1D2D928C1CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579FDE06-A807-4A81-97A6-1D2D928C1CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579FDE06-A807-4A81-97A6-1D2D928C1CA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FB0A3D6-AD9C-40B9-B001-560112605BE9}
 	EndGlobalSection
 EndGlobal

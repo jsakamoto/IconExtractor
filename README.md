@@ -1,35 +1,41 @@
-# IconExtractor
+# ![package icon](https://raw.githubusercontent.com/jsakamoto/IconExtractor/master/.assets/nupkg-icon.png) IconExtractor [![NuGet Package](https://img.shields.io/nuget/v/IconExtractor.svg)](https://www.nuget.org/packages/IconExtractor/)
 
-## Summary / 概要
+## Summary
 
-This is a class library on .NET Framework 4.  
-これは .NET Framework 4 上のクラスライブラリです。
+This is a class library for .NET Framework 4. and .NET Core on Windows OS. 
 
-This library allows you to extracting first .ico file from Win32 resource in PE format file (.exe, .dll), and write it to stream.  
-このライブラリは、PEフォーマットファイル(.exe, .dll) 中の Win32 リソースから一つ目の .ico ファイルを抽出して、stream に書き込むことができます。
+This library allows you to extract first .ico file from Win32 resource in PE format file (.exe, .dll) to a stream.
 
-This library work well on Microsoft Azure Web Apps (old name is "Azure Websites").  
-このライブラリは Microsoft Azure Web Apps (旧称 "Azure Websites") 上でも動作します。
+This library also works well on Microsoft Azure App Services (but **Windows Operating System only**).
 
-## How to install? / インストール方法
+_**Notice:** This is a .NET Standard 2.0 class library, but **this doesn't work on Linux and macOS**, because this library includes many Win32 API calls via P/Invoke._
 
-You can install this library via NuGet package manager console.  
-NuGet パッケージマネージャコンソール経由でインストールできます。
+## How to install?
+
+You can install this library via the NuGet package manager console.
 
 ```
 PM> Install-Package IconExtractor
 ```
 
-## How to use? / 使い方
+You can also install this library via dotnet CLI.
+
+```shell
+$ dotnet add package IconExtractor
+```
+
+## How to use?
 
 You can extract only one .ico file from PE format file (.exe, .dll) into stream by `Extract1stIconTo` static method live in `Toolbelt.Drawing.IconExtractor` class.
-
-`Toolbelt.Drawing.IconExtractor` クラスの`Extract1stIconTo` 静的メソッドによって、PEフォーマットファイル(.exe, .dll) 中の一つ目の .ico ファイルだけを抽出して、stream に書き込むことができます。
 
 ```cs
 using Toolbelt.Drawing;
 ...
 var source = @"C:\Foo\Bar.exe";
-using (var s = new FileStream(@"C:\Foo\Bar.ico", FileMode.Create))
-    IconExtractor.Extract1stIconTo(source, s);
+using var s = File.Create(@"C:\Foo\Bar.ico");
+IconExtractor.Extract1stIconTo(source, s);
 ```
+
+## License
+
+[GNU Lesser General Public License v3.0](https://github.com/jsakamoto/IconExtractor/blob/master/LICENSE)
